@@ -21,8 +21,9 @@ p {
    
 }
 .gmail{
+
    position: relative;
-   left: 50px;
+   left: -7px;
 }
 #gmail{
     position: relative;
@@ -513,12 +514,19 @@ p {
     .parent {
         grid-template-columns: 1fr
     }
+    .about-img{
+        width: 70%;
+    }
     .upper-img{
         display: block;
     }
     .inner-image{
         width: 100%;
         height: 38vh;
+    }
+    #gmail{
+        font-size: 0.8rem;
+        left: 0;
     }
     .image-2-3{
         width: 90%;
@@ -556,6 +564,8 @@ p {
         display: flex !important;
         flex-direction: column !important;
      padding: 40% 5%;
+     align-items: center;
+     text-align: justify;
     
     }
     

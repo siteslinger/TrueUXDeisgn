@@ -2,7 +2,7 @@ $(".toggle-btn").click(()=>{
     $(".nav-item").slideToggle()
 })
 $(".nav-link").click(function() {
-  if ($(window).width() <= 768) {  // Check if it's a mobile screen, adjust the value as per your requirement
+  if ($(window).width() <= 450) {  // Check if it's a mobile screen, adjust the value as per your requirement
       $(".nav-item").slideUp();
   }
 });
