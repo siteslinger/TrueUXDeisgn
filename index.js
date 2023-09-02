@@ -40,9 +40,10 @@ $(document).ready(function() {
               top: 0
             });
             break;
-        case 'about':
+        case '/about':
             $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
             $('.contact-container').hide();
+           
             $(".about-container").show();
             $('.home-ani').hide();
             break;
@@ -124,7 +125,7 @@ $(document).ready(function() {
 
   $('#candy-2').click(function(){
     var duration = 1000;
-
+$('.upper-img').show()
     $('#candy-1').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
     $('#candy-2').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
     $('#candy-3').animate({right: '-30%', top: '-200px', opacity: 0}, duration);
@@ -169,7 +170,7 @@ $("#next").click(function() {
     // Show both elements and reset their top property for the animation
     $innerDiv.css({ display: 'block', top: '100%' });
     $innerImage.css({ display: 'block', top: '100%' });
-    $('.upper-img').hide();
+    
 
     // Animation to move the divs to top
     $innerDiv.animate({ top: 0 }, 2000);
@@ -192,7 +193,8 @@ $('.btn-right-2').click(function() {
     $('.replace-candy-2, .images-upper').stop(true);
     clearTimeout(animationTimeout);
     $(".replace-candy-2").hide();
-    $(".replace-candy-1").hide()
+    $(".replace-candy-1").hide();
+    $('.upper-img').show()
     $(".replace-candy-3").fadeIn(1000)
 });
 
@@ -213,3 +215,21 @@ $(".btn-left-3").click(function() {
 });
 
 
+$('#linkbtn').click(function(event){
+  event.preventDefault()
+  $('#about').css({
+    display: 'block',
+  })
+  $('.citizen-pr').hide();
+  $('.navbar').show();
+  $('.contact-container').hide()
+})
+$('#contact-link').click(function(event){
+  event.preventDefault()
+  $('.contact-container').css({
+    display: 'block',
+  })
+  $('.citizen-pr').hide();
+  $('.navbar').show()
+  $('#about').hide()
+})
