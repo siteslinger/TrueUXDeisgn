@@ -173,19 +173,19 @@ $("#next").click(function() {
     
 
     // Animation to move the divs to top
-    $innerDiv.animate({ top: 0 }, 2000);
-    $innerImage.animate({ top: 0 }, 2000, function() {
+    $innerDiv.animate({ top: 0 }, 1000);
+    $innerImage.animate({ top: 0 }, 1000, function() {
 
-        // Auto reverse animation after 2 seconds
+       
         animationTimeout = setTimeout(function() {
-            $innerDiv.animate({ top: '100%' }, 2000, function() {
+            $innerDiv.animate({ top: '100%' }, 1000, function() {
                 $innerDiv.css('display', 'none');
             });
 
-            $innerImage.animate({ top: '100%' }, 2000, function() {
+            $innerImage.animate({ top: '100%' }, 1000, function() {
                 $innerImage.css('display', 'none');
             });
-        }, 3000);
+        }, 5000);
     });
 });
 
