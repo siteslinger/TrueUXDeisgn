@@ -427,6 +427,14 @@ p {
     position: relative;
     top: 18px
 }
+.link{
+    margin-right: 50px;
+}
+.link-in{
+    position: relative;
+    right: 40px;
+}
+    
 
 .foward a {
     color: #000
@@ -526,7 +534,7 @@ p {
     }
     #gmail{
         font-size: 0.8rem;
-        left: 0;
+        left: 20px !important;
     }
     .image-2-3{
         width: 90%;
