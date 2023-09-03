@@ -27,7 +27,7 @@ p {
 }
 #gmail{
     position: relative;
-    left: 50px; 
+    left: 50px ; 
 }
 .contact-container-2{
     padding: 100px 0 !important;
@@ -526,7 +526,7 @@ p {
     }
     #gmail{
         font-size: 0.8rem;
-        left: 0;
+        left: 20px !important;
     }
     .image-2-3{
         width: 90%;
@@ -675,9 +675,12 @@ body {
 }
 
 .link {
-    margin-right: 40px
+    margin-right: 50px
 }
-
+.link-in{
+    position: relative;
+    right: 40px;
+}
 .parent-cn {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -761,7 +764,7 @@ body {
     .about-container p {
         margin: 50px 0
     }
-
+    
     .home-container .navbar {
         padding: 0 7%0 3%
     }
