@@ -50,7 +50,7 @@ p {
     display: none
 }
 .image-2-3{
-    width: 30%;
+    width: 28%;
     height: 100%;
 }
 .content-case,.home-container .navbar ul {
@@ -427,6 +427,14 @@ p {
     position: relative;
     top: 18px
 }
+.link{
+    margin-right: 50px;
+}
+.link-in{
+    position: relative;
+    right: 40px;
+}
+    
 
 .foward a {
     color: #000
