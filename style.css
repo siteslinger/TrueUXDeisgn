@@ -52,6 +52,7 @@ p {
 .image-2-3{
     width: 27%;
     height: 100%;
+    right: 20px;
 }
 .content-case,.home-container .navbar ul {
     display: flex;
