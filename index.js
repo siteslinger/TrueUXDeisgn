@@ -193,8 +193,8 @@ $("#next").click(function() {
     
 
     // Animation to move the divs to top
-    $innerDiv.animate({ top: 0 }, 1000);
-    $innerImage.animate({ top: 0 }, 1000, function() {
+    $innerDiv.animate({ top: 0 }, 1500);
+    $innerImage.animate({ top: 0 }, 1500, function() {
 
        
         animationTimeout = setTimeout(function() {
