@@ -18,63 +18,83 @@ $(window).scroll(function(){
   }
 });
 $(document).ready(function() {
-  $(".nav-link").on("click", function(e) {
-    e.preventDefault();
-    
-    let href = $(this).attr("href").substring(1); // Removing the '#' from the href
-    
+  // Function to show the appropriate content based on the clicked tab
+  function showContent(href) {
     // Hide all contents
     $("#home-content, #about-content, #contact-content").hide();
-    
-    // Show the appropriate content based on the clicked tab
-    switch(href) {
-        case '/':
-            $(".home-ani").show();
-            $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
-            $('.about-container').hide();
-            $('.contact-container').hide();
-            $('#candy-1, #candy-2, #candy-3').css({
-              opacity: '1',
-              display: 'block',
-              left : 0,
-              top: 0
-            });
-            break;
-        case '/about':
-            $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
-            $('.contact-container').hide();
-           
-            $(".about-container").show();
-            $('.home-ani').hide();
-            break;
-        case '/contact':
-            $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
-            $(".contact-container").show();
-            $('.home-ani').hide();
-            $('.about-container').hide();
-            break;
-        default:
-            $(".home-ani").show();
-    }
-});
 
-    // Handle browser back and forward buttons
-    $(window).on('popstate', function() {
-        let currentPath = location.pathname;
-        
-        $(".nav-link").each(function() {
-            if ($(this).attr("href").substring(1) === currentPath) {
-                $(this).click();
-            }
+    switch (href) {
+      case '/':
+        $(".home-ani").show();
+        $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
+        $('.about-container').hide();
+        $('.contact-container').hide();
+        $('#candy-1, #candy-2, #candy-3').css({
+          opacity: '1',
+          display: 'block',
+          left: 0,
+          top: 0
         });
-    });
+        break;
+      case '/about':
+        $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
+        $('.contact-container').hide();
 
-    // Handle "previous page" button in your navbar
-    $('.nav-item a[href="#/back"]').click(function(e) {
-        e.preventDefault();  // Prevent the default action (useful if the href is "#")
-        window.history.back();
-    });
+        $(".about-container").show();
+        $('.home-ani').hide();
+        break;
+      case '/contact':
+        $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
+        $(".contact-container").show();
+        $('.home-ani').hide();
+        $('.about-container').hide();
+        break;
+      default:
+        $(".home-ani").show();
+    }
+  }
 
+  // Function to handle browser back and forward buttons
+  function handlePopState() {
+    let currentPath = location.pathname;
+    $(".nav-link").each(function() {
+      if ($(this).attr("href").substring(1) === currentPath) {
+        $(this).click();
+      }
+    });
+  }
+
+  // Handle clicks on the navbar links
+  $(".nav-link").on("click", function(e) {
+    e.preventDefault();
+
+    let href = $(this).attr("href").substring(1); // Removing the '#' from the href
+
+    // Show the appropriate content based on the clicked tab
+    showContent(href);
+
+  });
+
+  // Handle browser back and forward buttons
+  $(window).on('popstate', handlePopState);
+
+  // Handle "previous page" button in your navbar
+  $('.nav-item a[href="#/back"]').click(function(e) {
+    e.preventDefault();
+    if ($(window).width() <= 450) {  // Check if it's a mobile screen, adjust the value as per your requirement
+      $(".nav-item").slideUp();}
+    if ($('.about-container,.replace-candy-1,.replace-candy-3,.replace-candy-3').is(':visible')) {
+   
+      showContent('/') 
+
+    } else if ($('.contact-container').is(':visible')) {
+   
+      showContent('/about');
+    } 
+  });
+
+  // Initial setup: Show the appropriate content based on the current URL
+  showContent(location.pathname);
 });
 
 
@@ -233,3 +253,20 @@ $('#contact-link').click(function(event){
   $('.navbar').show()
   $('#about').hide()
 })
+$('.nav-item a[href="#/back-button"]').click(function(e) {
+  e.preventDefault();
+  if ($(window).width() <= 450) { // Check if it's a mobile screen, adjust the value as per your requirement
+    $(".nav-item").slideUp();
+  }
+
+  if ($('.citizen-pr').is(':visible')) {
+    window.history.back();
+  } else if ($('.contact-container-2').is(':visible') || $('.about-container-sania').is(':visible')) {
+    // If either "contact-container-2" or "about-container-sania" is visible, show "citizen-pr" and hide "about" and "contact"
+    $('.citizen-pr').show();
+    $('.contact-container-2, .about-container-sania, .contact-container, #about').css({
+      display: 'none'
+    });
+  }
+});
+
