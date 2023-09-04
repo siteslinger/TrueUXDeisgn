@@ -124,7 +124,7 @@ p {
     background-size: cover;
     background-position: center;
     width: 30%;  /* or whatever size you want */
-    height: 50vh;
+    height: 52vh;
     position: relative; 
     overflow: hidden;  /* clip any overflow content */
   
@@ -138,7 +138,7 @@ p {
     top: 100%;
     left: 0;
     width: 100%;  /* or whatever size you want */
-    height: 50vh;
+    height: 52vh;
    
 }
 #candy-1,#candy-2,#candy-3 {
@@ -535,7 +535,7 @@ p {
     }
     .inner-image{
         width: 100%;
-        height: 38vh;
+        height: 44vh;
     }
     #gmail{
         font-size: 0.8rem;
@@ -545,7 +545,7 @@ p {
         width: 90%;
     }
     .images-upper{
-        height: 38vh;
+        height: 44vh;
     }
 
     .wrapper a {
