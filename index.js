@@ -83,7 +83,7 @@ $(document).ready(function() {
     e.preventDefault();
     if ($(window).width() <= 450) {  // Check if it's a mobile screen, adjust the value as per your requirement
       $(".nav-item").slideUp();}
-    if ($('.about-container,.replace-candy-1,.replace-candy-3,.replace-candy-3').is(':visible')) {
+    if ($('.about-container').is(':visible') || $('.replace-candy-2').is(':visible') || $('.replace-candy-3').is(':visible') || $('.replace-candy-1').is(':visible'))  {
    
       showContent('/') 
 
