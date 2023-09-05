@@ -8,7 +8,11 @@
 p {
     margin-bottom: 0!important
 }
-
+#movie-night-link{
+    font-size: 1rem;
+    max-width: 700px;
+    top:90% ;
+}
 .home-ani,body {
     background-color: #000
 }
@@ -149,7 +153,8 @@ p {
 
 .sec-name {
     font-family: "Lato";
-    font-size: 1rem
+    font-size: 1rem;
+    text-transform: capitalize;
 }
 
 .top {
@@ -520,6 +525,10 @@ p {
     .contact-container-2{
        padding-top: 30% !important;
        
+    }
+    #movie-night-link{
+        font-size: 0.3rem;
+        max-width: 200px;
     }
     .citizen-pr{
         margin-top: 15%;
