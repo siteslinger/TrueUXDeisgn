@@ -615,7 +615,7 @@ body {
 }
 
 .container-main {
-    gap: 35px;
+    gap: 20px;
     max-width: 100%;
     min-height: 120vh;
     padding: 2%;
@@ -814,6 +814,9 @@ body {
     position: relative;
         right: 10px;
     }
+    #kon{
+        right: 15px;
+    }
     .content-case {
         display: flex;
         flex-direction: column;
@@ -864,6 +867,7 @@ body {
     .description{
         font-size: 1rem !important;
         padding: 0 2% !important;
+        text-align: justify;
         
     }
     .contact-h1{
