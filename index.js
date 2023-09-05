@@ -11,10 +11,16 @@ $(window).scroll(function(){
       $('.inside-nav').css({
           backgroundColor: "#fff"
       });
+      $('.toggle-btn').css({
+        color: '#000'
+      })
   } else {
       $('.inside-nav').css({
           backgroundColor: "#000"  // Black color when scrolled to the top or original position
       });
+      $('.toggle-btn').css({
+        color: '#fff'
+      })
   }
 });
 $(document).ready(function() {
