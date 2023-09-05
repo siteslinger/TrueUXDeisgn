@@ -597,8 +597,13 @@ p {
     .wrapper a {
         font-size: .9rem
     }
+    #movie-night-link{
+        font-size: 0.5rem;
+        width: 500px;
+    }
     .inner-image{
         height: 250px;
+        
     }
     .images-upper{
         height: 250px;
