@@ -177,6 +177,7 @@ p {
     transition: background-color .3s;
     min-height: 70px;
     z-index: 10;
+   
     
 }
 
@@ -683,7 +684,10 @@ body {
     display: flex;
     justify-content: end;
     align-items: center;
-    padding: 1% 9%0 0
+    padding: 1% 9%0 0;
+   
+  
+    
 }
 
 .container-fluid {
