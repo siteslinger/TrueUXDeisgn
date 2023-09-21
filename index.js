@@ -35,6 +35,7 @@ $(document).ready(function() {
         $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
         $('.about-container').hide();
         $('.contact-container').hide();
+        
         $('#candy-1, #candy-2, #candy-3').css({
           opacity: '1',
           display: 'block',
@@ -45,15 +46,29 @@ $(document).ready(function() {
       case '/about':
         $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
         $('.contact-container').hide();
-
+        const restSection = $('#content');
+        const introSection = $('.first-main');
+        restSection.show().animate({
+          top: '20px',
+        }, 1000);
+        $('body').css('overflow', 'auto')
+        introSection.fadeOut(1000);
         $(".about-container").show();
         $('.home-ani').hide();
+        $('#navbar-sec').fadeOut(1000);
         break;
       case '/contact':
         $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide();
         $(".contact-container").show();
         $('.home-ani').hide();
+      
+        $('#content').show().animate({
+          top: '20px',
+        }, 1000);
+        
+        $('.first-main').fadeOut(1000);
         $('.about-container').hide();
+        $('#navbar-sec').fadeOut(1000);
         break;
       default:
         $(".home-ani").show();
@@ -117,9 +132,24 @@ $(window).scroll(function() {
     }, 1000);
     $('body').css('overflow', 'auto')
     introSection.fadeOut(1000);
+   $('#navbar-sec').hide()
 
     animationStarted = true; 
-  }
+  } 
+
+});
+$('#nav-home').click(function() {
+  
+ 
+    const restSection = $('#content');
+    const introSection = $('.first-main');
+    restSection.show().animate({
+      top: '20px',
+    }, 1000);
+    $('body').css('overflow', 'auto')
+    introSection.fadeOut(1000);
+   $('#navbar-sec').fadeOut(1000);
+
 
 });
 
