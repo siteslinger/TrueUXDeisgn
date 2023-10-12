@@ -16,9 +16,7 @@ p {
 .home-ani,body {
     background-color: #000
 }
-.first-main{
-    margin-top: 7px;
-}
+
 .home-ani {
     padding: 3% 10% 4%;
     width: 100%;
@@ -43,6 +41,11 @@ p {
 }
 .image-2-3{
     width: 27%;
+    height: 100%;
+    right: 20px;
+}
+.image-2-4{
+    width: 33%;
     height: 100%;
     right: 20px;
 }
@@ -548,7 +551,7 @@ p {
         height: 44vh;
     }
     
-    .image-2-3{
+    .image-2-3, .image-2-4{
         width: 90%;
     }
     .images-upper{
